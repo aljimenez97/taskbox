@@ -7,8 +7,11 @@ import { withKnobs, object } from '@storybook/addon-knobs/react';
 import Task from "./Task";
 
 export default {
-    component: Task,
     title: 'Task',
+    parameters: {
+        component: Task,
+        componentSubtitle: 'Displays a task cell that can be archived or marked as fav',
+    },
     decorators: [withKnobs],
     // Our exports that end in "Data" are not stories.
     excludeStories: /.*Data$/,

@@ -3,6 +3,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+/**
+ Use an avatar for attributing actions or content to specific users. The user's name should always be present when using Avatar – either printed beside the avatar or in a tooltip.
+ **/
+
 export default function Task({ task: { id, title, state }, onArchiveTask, onPinTask }) {
     return (
         <div className={`list-item ${state}`}>
@@ -43,6 +47,9 @@ Task.propTypes = {
         title: PropTypes.string.isRequired,
         state: PropTypes.string.isRequired,
     }),
+    /**
+     Use the loading state to indicate that the data Avatar needs is still loading.
+     */
     onArchiveTask: PropTypes.func,
     onPinTask: PropTypes.func,
 };
